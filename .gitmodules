@@ -1,6 +1,6 @@
-[submodule "onlyoffice-plugins"]
-	path = onlyoffice-plugins
-	url=https://github.com/ONLYOFFICE/onlyoffice.github.io.git
 [submodule "onlyoffice-chinese-fonts"]
 	path = onlyoffice-chinese-fonts
 	url = https://github.com/funggtopp/onlyoffice-chinese-fonts.git
+[submodule "onlyoffice-plugins"]
+	path = onlyoffice-plugins
+	url = https://github.com/ONLYOFFICE/onlyoffice.github.io.git
