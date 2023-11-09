@@ -19,7 +19,7 @@ ADD ["onlyoffice-chinese-fonts/fonts for oo6/*", "/usr/share/fonts/truetype/cust
 # 添加一些插件
 ADD onlyoffice-plugins/sdkjs-plugins/content/html /var/www/onlyoffice/documentserver/sdkjs-plugins/html
 ADD onlyoffice-plugins/sdkjs-plugins/content/autocomplete /var/www/onlyoffice/documentserver/sdkjs-plugins/autocomplete
-ADD ponlyoffice-plugins/sdkjs-plugins/content/doc2md /var/www/onlyoffice/documentserver/sdkjs-plugins/doc2md
+ADD onlyoffice-plugins/sdkjs-plugins/content/doc2md /var/www/onlyoffice/documentserver/sdkjs-plugins/doc2md
 ADD onlyoffice-plugins/sdkjs-plugins/content/wordscounter /var/www/onlyoffice/documentserver/sdkjs-plugins/wordscounter
 
 # 修正hightlight js引用问题
