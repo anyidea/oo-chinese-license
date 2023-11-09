@@ -17,10 +17,10 @@ RUN rm -rf /usr/share/fonts/truetype/liberation
 ADD ["onlyoffice-chinese-fonts/fonts for oo6/*", "/usr/share/fonts/truetype/custom/"] 
 
 # 添加一些插件
-ADD plugin-html /var/www/onlyoffice/documentserver/sdkjs-plugins/html
-ADD plugin-autocomplete /var/www/onlyoffice/documentserver/sdkjs-plugins/autocomplete
-ADD plugin-doc2md /var/www/onlyoffice/documentserver/sdkjs-plugins/doc2md
-ADD plugin-wordscounter /var/www/onlyoffice/documentserver/sdkjs-plugins/wordscounter
+ADD onlyoffice-plugins/sdkjs-plugins/content/html /var/www/onlyoffice/documentserver/sdkjs-plugins/html
+ADD onlyoffice-plugins/sdkjs-plugins/content/autocomplete /var/www/onlyoffice/documentserver/sdkjs-plugins/autocomplete
+ADD ponlyoffice-plugins/sdkjs-plugins/content/doc2md /var/www/onlyoffice/documentserver/sdkjs-plugins/doc2md
+ADD onlyoffice-plugins/sdkjs-plugins/content/wordscounter /var/www/onlyoffice/documentserver/sdkjs-plugins/wordscounter
 
 # 修正hightlight js引用问题
 RUN sed -i "s/https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/2.2.2\/jquery.min.js/vendor\/jQuery-2.2.2-min\/jquery-v2.2.2-min.js/" /var/www/onlyoffice/documentserver/sdkjs-plugins/highlightcode/index.html
