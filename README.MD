@@ -1,6 +1,6 @@
 # ONLYOFFICE 中文包 授权（你懂的）镜像构建脚本
 
-[![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/aidenlu/oo-chinese-license)](https://hub.docker.com/r/aidenlu/oo-chinese-license)
+[![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/aidenlu/oo-unlimit)](https://hub.docker.com/r/aidenlu/oo-unlimit)
 [![Docker Pulls](https://img.shields.io/docker/pulls/aidenlu/oo-chinese-license)](https://hub.docker.com/r/aidenlu/oo-chinese-license)
 
 * 基础镜像来源于`alehoho/oo-ce-docker-license`
