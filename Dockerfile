@@ -23,7 +23,7 @@ ADD onlyoffice-plugins/sdkjs-plugins/content/doc2md /var/www/onlyoffice/document
 ADD onlyoffice-plugins/sdkjs-plugins/content/wordscounter /var/www/onlyoffice/documentserver/sdkjs-plugins/wordscounter
 
 # 修正hightlight js引用问题
-RUN sed -i "s/https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/2.2.2\/jquery.min.js/vendor\/jQuery-2.2.2-min\/jquery-v2.2.2-min.js/" /var/www/onlyoffice/documentserver/sdkjs-plugins/highlightcode/index.html
+# RUN sed -i "s/https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/2.2.2\/jquery.min.js/vendor\/jQuery-2.2.2-min\/jquery-v2.2.2-min.js/" /var/www/onlyoffice/documentserver/sdkjs-plugins/highlightcode/index.html
 
 # 修改文件缓存时间
 # 修改24小时为1小时
