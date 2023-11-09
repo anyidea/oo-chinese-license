@@ -1,7 +1,7 @@
 # ONLYOFFICE 中文包 授权（你懂的）镜像构建脚本
 
 [![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/aidenlu/oo-unlimit)](https://hub.docker.com/r/aidenlu/oo-unlimit)
-[![Docker Pulls](https://img.shields.io/docker/pulls/aidenlu/oo-chinese-license)](https://hub.docker.com/r/aidenlu/oo-chinese-license)
+[![Docker Pulls](https://img.shields.io/docker/pulls/aidenlu/oo-unlimit)](https://hub.docker.com/r/aidenlu/oo-unlimit)
 
 * 基础镜像来源于`alehoho/oo-ce-docker-license`
 * 引用了 `https://github.com/funggtopp/onlyoffice-chinese-fonts.git` 工程，解决中文字库问题
