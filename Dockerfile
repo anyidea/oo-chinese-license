@@ -10,11 +10,11 @@ RUN rm -rf /var/www/onlyoffice/documentserver/sdkjs-plugins/thesaurus
 RUN rm -rf /var/www/onlyoffice/documentserver/sdkjs-plugins/ocr
 
 # 移除字体
-RUN rm -rf /usr/share/fonts/truetype/dejavu
-RUN rm -rf /usr/share/fonts/truetype/liberation
+RUN rm -rf /usr/share/fonts/* /var/www/onlyoffice/documentserver/core-fonts/*
 
 # 导入中文字体
-ADD ["onlyoffice-chinese-fonts/fonts for oo6/*", "/usr/share/fonts/truetype/custom/"] 
+ADD ["onlyoffice-chinese-fonts/fonts for oo6/*", "/usr/share/fonts/"]
+RUN /usr/bin/documentserver-generate-allfonts.sh
 
 # 添加一些插件
 ADD onlyoffice-plugins/sdkjs-plugins/content/html /var/www/onlyoffice/documentserver/sdkjs-plugins/html
