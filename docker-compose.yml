@@ -21,6 +21,7 @@ services:
       - JWT_ENABLED=true
       - JWT_SECRET=secret
       - JWT_IN_BODY=true
+      - GENERATE_FONTS=false
     ports:
       - "80:80"
       - "443:443"
@@ -31,6 +32,7 @@ services:
       - ./onlyoffice/lib:/var/lib/onlyoffice
       - ./onlyoffice/logs:/var/log/onlyoffice
       - ./onlyoffice/cache:/var/lib/onlyoffice/documentserver/App_Data/cache/files
+      - ./onlyoffice/fonts:/usr/share/fonts
     networks:
       - onlyoffice-net
 

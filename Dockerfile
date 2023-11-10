@@ -14,6 +14,7 @@ RUN rm -rf /usr/share/fonts/* /var/www/onlyoffice/documentserver/core-fonts/*
 
 # 导入中文字体
 ADD ["onlyoffice-chinese-fonts/fonts for oo6/*", "/usr/share/fonts/"]
+ADD ["fonts/*", "/usr/share/fonts/"]
 RUN /usr/bin/documentserver-generate-allfonts.sh
 
 # 添加一些插件
