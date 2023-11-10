@@ -1,0 +1,68 @@
+version: "3.2"
+services:
+  onlyoffice-documentserver:
+    image: aidenlu/oo-chinese-unlimit:latest
+    container_name: onlyoffice-documentserver
+    restart: always
+    depends_on:
+      - onlyoffice-postgresql
+      - onlyoffice-rabbitmq
+      - onlyoffice-redis
+    environment:
+      - DB_TYPE=postgres
+      - DB_HOST=onlyoffice-postgresql
+      - DB_PORT=5432
+      - DB_NAME=onlyoffice
+      - DB_USER=onlyoffice
+      - AMQP_URI=amqp://guest:guest@onlyoffice-rabbitmq
+      - REDIS_SERVER_HOST=onlyoffice-redis
+      - REDIS_SERVER_PORT=6379
+      # Uncomment strings below to enable the JSON Web Token validation.
+      - JWT_ENABLED=true
+      - JWT_SECRET=secret
+      - JWT_IN_BODY=true
+    ports:
+      - "80:80"
+      - "443:443"
+    stdin_open: true
+    stop_grace_period: 60s
+    volumes:
+      - ./onlyoffice/data:/var/www/onlyoffice/Data
+      - ./onlyoffice/lib:/var/lib/onlyoffice
+      - ./onlyoffice/logs:/var/log/onlyoffice
+      - ./onlyoffice/cache:/var/lib/onlyoffice/documentserver/App_Data/cache/files
+    networks:
+      - onlyoffice-net
+
+  onlyoffice-rabbitmq:
+    container_name: onlyoffice-rabbitmq
+    image: rabbitmq:alpine
+    restart: always
+    networks:
+      - onlyoffice-net
+    volumns:
+      - ./onlyoffice/rabbitmq:/var/lib/rabbitmq
+
+  onlyoffice-redis:
+    container_name: onlyoffice-redis
+    image: redis:alpine
+    restart: always
+    networks:
+      - onlyoffice-net
+    volumns:
+      - ./onlyoffice/redis:/var/lib/redis
+
+  onlyoffice-postgresql:
+    container_name: onlyoffice-postgresql
+    image: postgres:16
+    environment:
+      - POSTGRES_DB=onlyoffice
+      - POSTGRES_USER=onlyoffice
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    restart: always
+    volumes:
+      - ./onlyoffice/postgres_data:/var/lib/postgresql/data
+    networks:
+      - onlyoffice-net
+networks:
+  onlyoffice-net:
