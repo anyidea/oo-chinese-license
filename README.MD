@@ -1,6 +1,6 @@
 # ONLYOFFICE 中文包 授权（你懂的）镜像构建脚本
 
-[![Docker Image CI](https://github.com/anyidea/oo-chinese-license/actions/workflows/docker-image.yml/badge.svg)](https://github.com/anyidea/oo-chinese-license/actions/workflows/docker-publish.yml)
+[![Docker Image CI](https://github.com/anyidea/oo-chinese-license/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/anyidea/oo-chinese-license/actions/workflows/docker-publish.yml)
 [![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/aidenlu/oo-chinese-unlimit)](https://hub.docker.com/r/aidenlu/oo-chinese-unlimit)
 [![Docker Pulls](https://img.shields.io/docker/pulls/aidenlu/oo-chinese-unlimit)](https://hub.docker.com/r/aidenlu/oo-chinese-unlimit)
 
