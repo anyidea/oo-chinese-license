@@ -4,7 +4,7 @@
 [![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/aidenlu/oo-chinese-unlimit)](https://hub.docker.com/r/aidenlu/oo-chinese-unlimit)
 [![Docker Pulls](https://img.shields.io/docker/pulls/aidenlu/oo-chinese-unlimit)](https://hub.docker.com/r/aidenlu/oo-chinese-unlimit)
 
-* 基础镜像来源于`alehoho/oo-ce-docker-license`
+* 基础镜像来源于`anyidea/oo-ce-docker-license`
 * 引用了 `https://github.com/funggtopp/onlyoffice-chinese-fonts.git` 工程，解决中文字库问题
 * 添加了 `wordscounter`,`doc2md`,`autocomplete`,`highlightcode`, `html` 插件
 * 去除了 `youtube`,`translator`,`zotero`,`mendeley`,`thesaurus`,`ocr` 国内无法使用的插件
