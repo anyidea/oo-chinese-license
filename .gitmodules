@@ -1,6 +1,8 @@
 [submodule "onlyoffice-chinese-fonts"]
 	path = onlyoffice-chinese-fonts
 	url = https://github.com/funggtopp/onlyoffice-chinese-fonts.git
+	branch = master
 [submodule "onlyoffice-plugins"]
 	path = onlyoffice-plugins
 	url = https://github.com/ONLYOFFICE/onlyoffice.github.io.git
+	branch = master
